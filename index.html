@@ -5,141 +5,6 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
-    <script type="text/javascript" src="js/jquery.min2.js"></script>
-<style type="text/css">
-	body{
-		position: relative;
-		background: #EFF2F4;
-		font: normal 13px "宋体" !important;
-	}
-	body,div,ul,li,p,a,img{
-		padding: 0;
-		margin: 0;
-	}
-	/*右侧悬浮菜单*/
-	.slide{
-		width: 50px;
-		height: 250px;
-		position: fixed;
-		top: 50%;
-		margin-top: -126px;
-		background: #018D75;
-		right: 0;
-		border-radius: 5px 0 0 5px;
-		z-index: 999;
-	}
-	.slide ul{
-		list-style: none;
-	}
-	.slide .icon li{
-		width: 49px;
-		height: 50px;
-		background: url(img/icon.png) no-repeat;
-	}
-	.slide .icon .up{
-		background-position:-330px -120px ;
-	}
-	.slide .icon li.qq{
-		background-position:-385px -73px ;
-	}
-	.slide .icon li.tel{
-		background-position:-385px -160px ;
-	}
-	.slide .icon li.wx{
-		background-position:-385px -120px ;
-	}
-	.slide .icon li.down{
-		background-position:-330px -160px ;
-	}
-	.slide .info{
-		top: 50%;
-		height: 147px;
-		position: absolute;
-		right: 100%;
-		background: #018D75;
-		width: 0px;
-		overflow: hidden;
-		margin-top: -73.5px;
-		transition:0.5s;
-		border-radius:4px 0 0 4px ;
-	}
-	.slide .info.hover{
-		width: 145px;
-
-	}
-	.slide .info li{
-		width: 145px;
-		color: #CCCCCC;
-		text-align: center;
-	}
-	.slide .info li p{
-		font-size: 1.1em;
-		line-height: 2em;
-		padding: 15px;
-		text-align: left;
-	}
-	.slide .info li.qq p a{
-		display: block;
-		margin-top: 12px;
-		width: 100px;
-		height: 32px;
-		line-height: 32px;
-		color: #00DFB9;
-		font-size: 16px;
-		text-align: center;
-		text-decoration: none;
-		border: 1px solid #00DFB9;
-		border-radius: 5px;
-	}
-	.slide .info li.qq p a:hover{
-		color: #FFFFFF;
-		border: none;
-		background: #00E0DB;
-	}
-	.slide .info li div.img{
-		height: 100%;
-		background: #DEFFF9;
-		margin: 15px;
-	}
-	.slide .info li div.img img{
-		width: 100%;
-		height: 100%;
-	}
-	/*控制菜单的按钮*/
-	.index_cy{
-		width: 30px;
-		height: 30px;
-		background: url(img/index_cy.png);
-		position: fixed;
-		right: 0;
-		top: 50%;
-		margin-top: 140px;
-		background-position: 62px 0;
-		cursor: pointer;
-	}
-	.index_cy2{
-		width: 30px;
-		height: 30px;
-		background: url(img/index_cy.png);
-		position: fixed;
-		right: 0;
-		top: 50%;
-		margin-top: 140px;
-		background-position: 30px 0;
-		cursor: pointer;
-	}
-
-	/*自适应 当屏小于1050时隐藏*/
-	@media screen and (max-width: 1050px) {
-		.slide{
-			display: none;
-		}
-		#btn{
-			display: none;
-		}
-
-	}
-</style>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>玉玲珑</title>
@@ -162,6 +27,7 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- Google Fonts -->
+	<link href="css/zzsc.css" rel="stylesheet" type="text/css"/>
 
 	<!-- Animate -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -181,63 +47,41 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+<script>
+$(function() {
+	// 悬浮窗口
+	$(".yb_conct").hover(function() {
+		$(".yb_conct").css("right", "5px");
+		$(".yb_bar .yb_ercode").css('height', '200px');
+	}, function() {
+		$(".yb_conct").css("right", "-127px");
+		$(".yb_bar .yb_ercode").css('height', '53px');
+	});
+	// 返回顶部
+	$(".yb_top").click(function() {
+		$("html,body").animate({
+			'scrollTop': '0px'
+		}, 300)
+	});
+});
+</script>
 
 	</head>
 	<body>
-	<!--右侧悬浮菜单-->
-<div class="slide">
-	<ul class="icon">
-		<a href="#0">
-		<li class="up" title="上一页" ></li>
-		</a>
-		<li class="qq"></li>
-		<li class="tel"></li>
-		<li class="wx"></li>
-		<a href="#1">
-		<li class="down" title="下一页"></li>
-		</a>>
-	</ul>
-	<ul class="info">
-		<li class="qq">
-			<p>在线沟通，请点我<a href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" target="_blank">在线咨询</a></p>
-		</li>
-		<li class="tel">
-			<p>咨询热线：<br>400-800-8888<br>客服qq：<br>123456789</p>
-		</li>
-		<li class="wx">
-			<div class="img"><img src="img/1441956938.png" /></div>
-		</li>
-	</ul>
+<div class="yb_conct">
+  <div class="yb_bar">
+    <ul>
+      <li class="yb_top">返回顶部</li>
+      <li class="yb_phone">4008-123-456</li>
+      <li class="yb_QQ">
+      	<a target="_blank" href="http://sc.chinaz.com" title="即刻发送您的需求">在线咨询</a>
+      </li>
+      <li class="yb_ercode" style="height:53px;">微信二维码 <br>
+        <img class="hd_qr" src="images/weixin.jpg" width="125" alt="关注你附近"> </li>
+    </ul>
+  </div>
 </div>
-<div id="btn" class="index_cy"></div>
-<script type="text/javascript">
-$(function(){
-
-	$('.slide .icon li').not('.up,.down').mouseenter(function(){
-		$('.slide .info').addClass('hover');
-		$('.slide .info li').hide();
-		$('.slide .info li.'+$(this).attr('class')).show();//.slide .info li.qq
-	});
-	$('.slide').mouseleave(function(){
-		$('.slide .info').removeClass('hover');
-	});
-
-	$('#btn').click(function(){
-		$('.slide').toggle();
-		if($(this).hasClass('index_cy')){
-			$(this).removeClass('index_cy');
-			$(this).addClass('index_cy2');
-		}else{
-			$(this).removeClass('index_cy2');
-			$(this).addClass('index_cy');
-		}
-
-	});
-
-});
-</script>
-	<a name="0"><a/>
-	
 	<div id="fh5co-header">
 		<div class="container">
 			<!-- Mobile Toggle Menu Button -->
@@ -441,7 +285,6 @@ $(function(){
 				</div>
 			</div>
 			<p align="center">版权所有：最终解释权归本网站所有</p>
-			<a name="1"><a/>
 		</div>
 	</div> <!-- END fh5co-page -->
 
