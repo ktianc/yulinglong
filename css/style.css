@@ -241,7 +241,7 @@ p {
   }
 }
 #fh5co-header #fh5co-logo a {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "STKaiti", sans-serif;
   font-size: 30px;
   color: #fff;
 }
@@ -763,7 +763,7 @@ p {
 }
 .img-grid a .fh5co-meta {
   color: rgba(255, 255, 255, 0.4);
-  font-size: 10px;
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: 2px;
   display: block;
@@ -789,7 +789,7 @@ p {
 }
 
 .section-heading .fh5co-section-title {
-  font-size: 11px;
+  font-size: 18px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #41454f;
