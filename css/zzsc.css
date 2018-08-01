@@ -54,19 +54,19 @@ body {
 	overflow: hidden;
 }
 .yb_bar .yb_top {
-	background: #ff4a00 url(../images/fixCont.png) no-repeat 0 0;
+	background: #44c865 url(../images/fixCont.png) no-repeat 0 0;
 }
 .yb_bar .yb_phone {
-	background: #ff4a00 url(../images/fixCont.png) no-repeat 0 -57px;
+	background: #44c865 url(../images/fixCont.png) no-repeat 0 -57px;
 }
 .yb_bar .yb_QQ {
 	text-indent: 0;
-	background: #ff4a00 url(../images/fixCont.png) no-repeat 0 -113px;
+	background: #44c865 url(../images/fixCont.png) no-repeat 0 -113px;
 }
 .yb_bar .yb_ercode {
 	/*height:200px;*/
 
-	background: #ff4a00 url(../images/fixCont.png) no-repeat 0 -169px;
+	background: #44c865 url(../images/fixCont.png) no-repeat 0 -169px;
 }
 .hd_qr {
 	padding: 0 29px 25px 29px;
